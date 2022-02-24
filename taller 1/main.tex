@@ -20,6 +20,7 @@
 \usepackage{algorithm,algpseudocode}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{tabularx}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 
 \title{Análisis del algoritmo de ordenamiento de Timsort}
@@ -176,6 +177,7 @@ Como salidas tenemos la secuencia $S = \left\langle s_{i}\in\mathbb{T}\land1\le 
 
 \subsection{Complejidad}
 Por investigación se encontro que el algoritmo TimSort tiene orden de complejidad $O\left(\left|S\right|log(\left|S\right|)\right)$ en su caso promedio y en su peor caso, mientras que en su mejor caso tiene orden de complejidad $\Omega\left\left \right(\left n\right)\right$. Esto gracias a que aprovecha las secciones d ela secuencias que ya están ordenadas para copiarlas directamente en una sebsecuencia sin tener que ordenarlas de nuevo.
+
 \subsection{Invariante}
 
 \begin{itemize}
@@ -193,6 +195,98 @@ Por investigación se encontro que el algoritmo TimSort tiene orden de complejid
         \subitem \textbf{Avance:} Por cada iteración los elementos desde el inicio de arreglo hasta i están ordenados.
         \subitem \textbf{Terminación:} S’ es una secuencia ordenada.
 \end{itemize}
+
+\section{Reporte de pruebas}
+\subsection{Tiempo de ejecución por cantidad de elementos en la secuencia}
+En el siguiente gráfico se puede observar la tendencia en el tiempo (en milisegundos) que existe al aumentar la cantidad de elementos existentes en la secuencia S.
+	\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{imagenes/graficoCantidadElementosVSTiempoEjecucion.PNG}
+        \caption{Cantidad de elementos VS Tiempo de ejecución}
+        \label{fig:ger}
+    \end{figure}
+    
+\subsection{Tabla de los resultados obtenidos}
+La siguiente tabla ilustra de manera ordenada y más específica la relación dada en la gráfica de la subsección anterior.
+    \begin{center}
+    \begin{tabularx}{0.8\textwidth} { 
+    | >{\raggedright\arraybackslash}X 
+    | >{\centering\arraybackslash}X 
+    | >{\raggedleft\arraybackslash}X | }
+    \hline
+    Tiempo (milisegundos) (y) & Elementos (x) \\
+    \hline
+    0.004 & 1 \\
+    \hline
+        \hline
+    0.674 & 101  \\
+    \hline
+        \hline
+    17.677 & 501 \\
+    \hline
+        \hline
+    65.881 & 1001 \\
+    \hline
+        \hline
+    153.125 & 1501 \\
+    \hline
+        \hline
+    279.578 & 2001 \\
+    \hline
+        \hline
+    417.878 & 2501 \\
+    \hline
+        \hline
+    608.01 & 3001 \\
+    \hline
+        \hline
+    834.625 & 3501 \\
+    \hline
+        \hline
+    1054.222 & 4001 \\
+    \hline
+        \hline
+    1379.562 & 4501 \\
+    \hline
+        \hline
+    1801.025 & 5001 \\
+    \hline
+        \hline
+    2114.694 & 5501 \\
+    \hline
+        \hline
+    2365.756 & 6001 \\
+    \hline
+        \hline
+    2885.292 & 6501 \\
+    \hline
+        \hline
+    3484.229 & 7001 \\
+    \hline
+        \hline
+    3939.506 & 7501 \\
+    \hline
+        \hline
+    4455.509 & 8001 \\
+    \hline
+        \hline
+    5082.716 & 8501 \\
+    \hline
+        \hline
+    5495.812 & 9001 \\
+    \hline
+        \hline
+    5906.145 & 9501 \\
+    \hline
+            \hline
+    7013.926 & 10001 \\
+    \hline
+    
+    \end{tabularx}
+    
+    \end{center}
+    
+
 \bibliography{sample}
 \begin{thebibliography}{0}
   \bibitem{Timsort GeeksforGeeks}  Kumar,A.(26 de junio de 2021) GeeksforGeeks.Recuperado de \url{https://www.geeksforgeeks.org/timsort/}.

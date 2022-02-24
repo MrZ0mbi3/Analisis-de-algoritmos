@@ -1,0 +1,2 @@
+Para poder ejecutar el codigo implentado se debe utilizar un compilador en línea que en este caso es repl.it el cual se puede acceder por medio del link https://replit.com/languages/lua.
+Después se debe cargar el archivo de la implementación copiando y pegando el código del archivo o cargando el archivo en la parte "files" y en sus opciones y ya por último queda dar "run" al archivo.
